@@ -16,22 +16,27 @@ function validStr(str){
     return (gameChoice.has(str1));
 }
 
-console.log("Welcome to Rock Paper Scissor!\n Let's Start!");
+function game(){
+    var victory;
+    console.log("Welcome to Rock Paper Scissor!\n Let's Start!");
 
-while(!winner){
-    var compChoice = getComputerChoice();
-    var playerChoice = prompt("Rock Paper Scissor! Enter your decisions!");
-    while(!validStr(playerChoice)){
-        playerChoice = prompt("Invalid Input! Please enter a valid decisions!");
-    }
+    while(!winner){
+        var compChoice = getComputerChoice();
+        var playerChoice = prompt("Rock Paper Scissor! Enter your decisions!");
+        while(!validStr(playerChoice)){
+            playerChoice = prompt("Invalid Input! Please enter a valid decisions!");
+        }
 
-    if(gameChoice.get(compChoice) == playerChoice.toLowerCase()){
-        console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nComputer won!")
-        winner = true;
-    }else if(gameChoice.get(playerChoice.toLowerCase()) == compChoice){
-        console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nPlayer won!");
-        winner = true;
-    }else{
-        console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nIt's a tie!");
+        if(gameChoice.get(compChoice) == playerChoice.toLowerCase()){
+            console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nComputer won!")
+            winner = true;
+        }else if(gameChoice.get(playerChoice.toLowerCase()) == compChoice){
+            console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nPlayer won!");
+            winner = true;
+        }else{
+            console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nIt's a tie!");
+        }
     }
 }
+
+game();
