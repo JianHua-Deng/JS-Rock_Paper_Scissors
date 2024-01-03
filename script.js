@@ -16,8 +16,22 @@ function validStr(str){
     return (gameChoice.has(str1));
 }
 
+function playRound(compChoice, playerChoice){
+
+    if(gameChoice.get(compChoice) == playerChoice.toLowerCase()){
+        console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\n")
+        return "computer"
+    }else if(gameChoice.get(playerChoice.toLowerCase()) == compChoice){
+        console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\n");
+        return "player";
+    }else{
+        console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\n");
+        return "tie";
+    }
+}
+
 function game(){
-    var victory;
+    var result;
     console.log("Welcome to Rock Paper Scissor!\n Let's Start!");
 
     while(!winner){
@@ -26,17 +40,14 @@ function game(){
         while(!validStr(playerChoice)){
             playerChoice = prompt("Invalid Input! Please enter a valid decisions!");
         }
-
-        if(gameChoice.get(compChoice) == playerChoice.toLowerCase()){
-            console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nComputer won!")
-            winner = true;
-        }else if(gameChoice.get(playerChoice.toLowerCase()) == compChoice){
-            console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nPlayer won!");
+        result = playRound(compChoice, playerChoice);
+        if( result == "computer" || result == "player"){
             winner = true;
         }else{
-            console.log("Computer: " + compChoice + ", Player: " + playerChoice.toLocaleLowerCase() + "\nIt's a tie!");
+            console.log("It's a tie, Let's do it one more time!");
         }
     }
+    console.log(result + " Won!");
 }
 
 game();
