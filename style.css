@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(95, 110, 185);
+    margin: 0;
+    gap: 30px;
+}
+
+.topic{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.choices, .scoreboards{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.result{
+    display: none;
+}
+
+img:hover{
+    transition-duration: 0.2s;
+    transform: scale(1.2);
+}
+
+

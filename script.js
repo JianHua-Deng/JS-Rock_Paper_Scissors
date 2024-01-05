@@ -47,7 +47,7 @@ function game(){
             console.log("It's a tie, Let's do it one more time!");
         }
     }
-    console.log(result + " Won!");
+    console.log(result + "Won!");
 }
 
 game();
