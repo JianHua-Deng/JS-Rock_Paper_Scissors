@@ -20,6 +20,14 @@ body{
 
 .result{
     display: none;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+}
+
+
+img{
+    transition-duration: 0.2s;
 }
 
 img:hover{

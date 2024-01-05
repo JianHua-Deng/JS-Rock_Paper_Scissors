@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8">
         <title>Rock-Paper-Scissors</title>
-        <script src="script.j"></script>
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="topic">
@@ -28,25 +28,27 @@
 
         <div class="choices">
             <div class="rock">
-                <img src="./images/Rock.png" alt="rock">
+                <img src="./images/Rock.png" alt="rock" id="rock">
             </div>
 
             <div class="paper">
-                <img src="./images/Paper.png" alt="paper">
+                <img src="./images/Paper.png" alt="paper" id="paper">
             </div>
 
             <div class="scissor">
-                <img src="./images/Scissors.png" alt="scissor">
+                <img src="./images/Scissor.png" alt="scissor" id="scissor">
             </div>
         </div>
 
         <div class="result">
             <div class="player-choice">
                 <div>The Player Chose:</div>
+                <img src="./images/Paper.png" id="player-img" alt="player choice">
             </div>
          
             <div class="computer-choice">
                 <div>The Computer Chose:</div>
+                <img src="./images/Paper.png" id="computer-img" alt="computer choice">
             </div>            
 
         </div>
