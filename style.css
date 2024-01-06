@@ -8,7 +8,7 @@ body{
     color: white;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgb(72, 109, 230), rgb(212, 116, 134));
+    background: linear-gradient(rgb(65, 99, 211), rgb(211, 119, 136));
     margin: 0;
     padding: 30px;
     gap: 70px;
