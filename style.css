@@ -1,9 +1,11 @@
 body{
+    font-family: 'Courier New', Courier, monospace, sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: rgb(95, 110, 185);
+    background-color: rgb(195, 202, 238);
     margin: 0;
-    gap: 30px;
+    padding: 30px;
+    gap: 70px;
 }
 
 .topic{
@@ -12,40 +14,64 @@ body{
     text-align: center;
 }
 
+.top-info{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .choices, .scoreboards{
     display: flex;
     justify-content: center;
     gap: 5%;
+    flex-wrap: wrap;
 }
+
+.scoreboards{
+    gap: 10%;
+}
+
 
 .result{
     display: none;
     justify-content: center;
     gap: 100px;
     text-align: center;
+    flex-wrap: wrap;
 }
 
+.choice-text{
+    margin-bottom: 30px;
+}
 
-img{
+button{
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+img, button{
     transition-duration: 0.2s;
 }
 
-img:hover{
+img:hover, button:hover{
     transition-duration: 0.2s;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
-.reset-game{
+.reset-game, .next-round{
     max-width: 200px;
     margin: 0 auto;
 }
 
 .next-round{
-    align-items: center;
+    display: none;
 }
 
 .game-result{
     display: flex;
     flex-direction: column;
+    align-self: center;
 }
 

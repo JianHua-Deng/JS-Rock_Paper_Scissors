@@ -40,11 +40,14 @@ function reset(){
     computerScore.textContent = 0;
     resultScreen.style.display = "none";
     choiceScreen.style.display = "flex";
+    endResult.textContent = "";
 }
 
 function nextRound(){
     resultScreen.style.display = "none";
     choiceScreen.style.display = "flex";
+    resetButton.style.display = "inline"
+    nextButton.style.display = "none";
 }
 
 function getComputerChoice(){
@@ -108,15 +111,17 @@ function handleChoice(){
     }else{
         gameResult.textContent = "It's a tie!";
     }
-    setSrc(playerChoice, compChoice);
+    setSrc(playerChoice, compChoice); /* Set playerImg and compImg to point to right image they chose */
 
     if(playerPoints >= 5 || compPoints >= 5){
-        nextButton.style.display = "none";
         if(playerPoints > compPoints){
-            endResult.textContent += "Player won the game!";
+            endResult.textContent += "Game Over! Player won the game!";
         }else{
-            endResult.textContent += "Computer won the game!";
+            endResult.textContent += "Game Over! Computer won the game!";
         }
+    }else{
+        resetButton.style.display = "none"
+        nextButton.style.display = "inline";
     }
     choiceScreen.style.display = "none";
     resultScreen.style.display = "flex";

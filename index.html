@@ -8,18 +8,20 @@
     </head>
     <body>
         <div class="topic">
-            <h1 class="title">Rock-Paper-Scissors!</h1>
-            <h2 class="game-info">Whoever scores 5 points first, Win!</h2>
-            <button class="reset-game">Reset Score</button>
+            <div class="top-info">
+                <h1 class="title">Rock-Paper-Scissor!</h1>
+                <h3 class="game-info">Whoever scores 5 points first, Win!</h2>
+            </div>
+            
             <div class="scoreboards">
                 <div class="player">
                     <h1>Player Scores:</h1>
-                    <div id="player-scores">0</div>
+                    <h2 id="player-scores">0</h2>
                 </div>
     
                 <div class="computer">
                     <h1>Computer Scores:</h1>
-                    <div id="computer-scores">0</div>
+                    <h2 id="computer-scores">0</h2>
                 </div>
             </div>
 
@@ -42,19 +44,19 @@
 
         <div class="result">
             <div class="player-choice">
-                <div>The Player Chose:</div>
+                <h4 class="choice-text">Player Chose:</h4>
                 <img src="./images/Paper.png" id="player-img" alt="player choice">
             </div>
             <div class="game-result">
-                <div class="result-text"></div>
-                <div class="end-text"></div>
-                <button class="next-round">Next Round!</button>
+                <h3 class="result-text"></h3>
+                <h1 class="end-text"></h1>
             </div>
             <div class="computer-choice">
-                <div>The Computer Chose:</div>
+                <h4 class="choice-text">Computer Chose:</h4>
                 <img src="./images/Paper.png" id="computer-img" alt="computer choice">
             </div>         
         </div>
-
+        <button class="reset-game">Reset Score</button>
+        <button class="next-round">Next Round!</button>
     </body>
 </html>
