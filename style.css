@@ -1,8 +1,14 @@
+html{
+    min-height: 100%;
+}
+
 body{
     font-family: 'Courier New', Courier, monospace, sans-serif;
+    height: 100%;
+    color: white;
     display: flex;
     flex-direction: column;
-    background-color: rgb(195, 202, 238);
+    background: linear-gradient(rgb(72, 109, 230), rgb(212, 116, 134));
     margin: 0;
     padding: 30px;
     gap: 70px;
