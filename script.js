@@ -17,6 +17,7 @@ const scissorImg = document.getElementById("Scissor");
 
 const playerImg = document.getElementById("player-img");
 const compImg = document.getElementById("computer-img");
+
 const playerScore = document.getElementById("player-scores");
 const computerScore = document.getElementById("computer-scores");
 const resultScreen = document.querySelector('.result');
@@ -26,7 +27,7 @@ const nextButton = document.querySelector(".next-round");
 const gameResult = document.querySelector(".result-text");
 const endResult = document.querySelector(".end-text");
 
-/* adding event listener to rock, paper, and scissor */
+/* adding event listener to rock, paper, scissor, and buttons */
 rockImg.addEventListener("click", handleChoice);
 paperImg.addEventListener("click", handleChoice);
 scissorImg.addEventListener("click", handleChoice);
@@ -75,6 +76,7 @@ function addPoints(result){
     }
 }
 
+/* Linking playerImg and compImg to appropriate images in the images folder*/
 function setSrc(playerChoice, compChoice){
     switch(playerChoice){
         case "Rock":
@@ -101,6 +103,7 @@ function setSrc(playerChoice, compChoice){
     }
 }
 
+/* The main function of the game */
 function handleChoice(){
     playerChoice = this.id;
     compChoice = getComputerChoice();
@@ -120,6 +123,8 @@ function handleChoice(){
             endResult.textContent += "Game Over! Computer won the game!";
         }
     }else{
+        /* This exectues only when the game has no winner yet*/
+        /* In such case, we DON'T show the reset button, and only shows the next button*/
         resetButton.style.display = "none"
         nextButton.style.display = "inline";
     }
@@ -127,12 +132,3 @@ function handleChoice(){
     resultScreen.style.display = "flex";
 
 }
-
-
-
-/*
-1. When player clicks on either of the images, it triggers a event, and in the js, there should be a function that handles
-the event, and determine which choice did the player make
-2. Now that we know the choice that the player made, there should be a function that determines the choice that the computer made
-3.
-*/
