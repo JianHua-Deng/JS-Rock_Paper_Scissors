@@ -35,4 +35,17 @@ img:hover{
     transform: scale(1.2);
 }
 
+.reset-game{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.next-round{
+    align-items: center;
+}
+
+.game-result{
+    display: flex;
+    flex-direction: column;
+}
 

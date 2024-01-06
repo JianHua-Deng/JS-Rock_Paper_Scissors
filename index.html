@@ -10,7 +10,7 @@
         <div class="topic">
             <h1 class="title">Rock-Paper-Scissors!</h1>
             <h2 class="game-info">Whoever scores 5 points first, Win!</h2>
-
+            <button class="reset-game">Reset Score</button>
             <div class="scoreboards">
                 <div class="player">
                     <h1>Player Scores:</h1>
@@ -28,15 +28,15 @@
 
         <div class="choices">
             <div class="rock">
-                <img src="./images/Rock.png" alt="rock" id="rock">
+                <img src="./images/Rock.png" alt="rock" id="Rock">
             </div>
 
             <div class="paper">
-                <img src="./images/Paper.png" alt="paper" id="paper">
+                <img src="./images/Paper.png" alt="paper" id="Paper">
             </div>
 
             <div class="scissor">
-                <img src="./images/Scissor.png" alt="scissor" id="scissor">
+                <img src="./images/Scissor.png" alt="scissor" id="Scissor">
             </div>
         </div>
 
@@ -45,12 +45,15 @@
                 <div>The Player Chose:</div>
                 <img src="./images/Paper.png" id="player-img" alt="player choice">
             </div>
-         
+            <div class="game-result">
+                <div class="result-text"></div>
+                <div class="end-text"></div>
+                <button class="next-round">Next Round!</button>
+            </div>
             <div class="computer-choice">
                 <div>The Computer Chose:</div>
                 <img src="./images/Paper.png" id="computer-img" alt="computer choice">
-            </div>            
-
+            </div>         
         </div>
 
     </body>
