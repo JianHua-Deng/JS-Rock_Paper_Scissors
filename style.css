@@ -59,6 +59,7 @@ button{
 
 img, button{
     transition-duration: 0.2s;
+    user-select: none;
 }
 
 img:hover, button:hover{
