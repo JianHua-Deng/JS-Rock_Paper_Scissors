@@ -55,6 +55,7 @@ function getComputerChoice(){
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
+/* Play a round by comparing playerChoice and computerChoice to the map*/
 function playRound(playerChoice, compChoice){
 
     if(gameChoice.get(compChoice) == playerChoice){
